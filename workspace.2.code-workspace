@@ -1,0 +1,10 @@
+{
+    "folders": [
+        {
+            "path": "SNAH_B2B_BackOrderHistory"
+        }
+    ],
+    "settings": {
+        "SAP HANA Project Explorer.bind.confirm automatic undeployment": false
+    }
+}

@@ -1,0 +1,18 @@
+###
+POST http://localhost:4004/odata/v4/erp-backorderhistory/GetBackOrderHistory
+Content-Type: application/json
+
+{
+ "soldTo" : "02076002",
+ "shipTo" : ["2152581"],
+ "search" : "11998871",
+ "searchBy" : "orderNumber",
+ "fromDate" : "2024-06-26 00:00:00.000000000",
+ "toDate" : "2024-06-26 00:00:00.000000000",
+ "status" : [ "3"],
+ "sort" : "orderDate",
+ "dir" : "desc",
+ "currentPage" : 0,
+ "pageSize" : 12,
+ "orderType" : [ "SE"]
+}
