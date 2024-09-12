@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "bb289f77-fc1d-4189-b763-06a6ff248e4a",
+		"name": "OrderEntry_V1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27111871"
+	},
+	"item": [
+		{
+			"name": "_sendOrder_PostOrder Fish",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "9c4bd50a-2b42-4f4c-8fa0-49fb9cce1be9$m1JV4QuUi916FbBzzWTqeVZVp4VGChCruExGIrvo1lY=",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "sb-7809b508-efc2-4e2b-b5b7-a649ba944994!b3479|it-rt-sna-common-dev!b34",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "iFlowToken ",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://sna-common-dev.authentication.us20.hana.ondemand.com/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"customerShipTo\": \"2624076\",\r\n\t\"customerSoldTo\": \"2624076\",\r\n\t\"billTo\": \"2624076\",\r\n\t\"dateOrder\": \"2024-08-28T01:34:54.090Z\",\r\n\t\"dateRequest\": \"2024-09-22T00:00:00.000Z\",\r\n\t\"cancelDate\": \"2024-09-30T00:00:00.000Z\",\r\n\t\"orderReference1\": \"PBC B7888883\",\r\n\t\"asm\": \"yes\",\r\n\t\"orderSource\": \"GB2B\",\r\n\t\"orderTakenBy\": \"eloreto@shimano.com\",\r\n\t\"orderType\": \"SO\",\r\n\t\"originalOrderNumber\": \"B7888883\",\r\n\t\"paymentTerms\": \" \",\r\n\t\"prepaymentChoice\": \"0\",\r\n\t\"totalPrice\": 15.1,\r\n\t\"salesBranch\": \"SBX\",\r\n\t\"shipmentCompleteFlag\": \"0\",\r\n\t\"deliveryFee\": 0.0,\r\n\t\"currency\": \"USD\",\r\n\t\"additionalEmail\": \"\",\r\n    \"freightRule\" : \"N\",\r\n\t\"routeCode\": \"PIA\",\r\n\t\"detailLines\": [\r\n\t\t{\r\n\t\t\t\"sequence\": \"0\",\r\n\t\t\t\"priceOverride\": \"\",\r\n\t\t\t\"orderQuantity\": 2,\r\n\t\t\t\"productCode\": \"TYR20II\",\r\n\t\t\t\"dateRequest\": \"\",\r\n\t\t\t\"itemPrice\": 15.1,\r\n\t\t\t\"isGroupSetLineItem\": false,\r\n\t\t\t\"appliedPromotions\": [],\r\n\t\t\t\"memo\": \"Order Memo\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"sequence\": \"1\",\r\n\t\t\t\"priceOverride\": \"\",\r\n\t\t\t\"orderQuantity\": 3,\r\n\t\t\t\"productCode\": \"CDF200A\",\r\n\t\t\t\"dateRequest\": \"\",\r\n\t\t\t\"itemPrice\": 15.1,\r\n\t\t\t\"isGroupSetLineItem\": false,\r\n\t\t\t\"appliedPromotions\": [],\r\n\t\t\t\"memo\": \"Order Memo\"\r\n\t\t}\r\n\t],\r\n\t\"appliedPromotions\": []\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sna-common-dev.it-cpi009-rt.cfapps.us20.hana.ondemand.com/http/Hybris_salesOrderCreate_HTTP_Build",
+					"protocol": "https",
+					"host": [
+						"sna-common-dev",
+						"it-cpi009-rt",
+						"cfapps",
+						"us20",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"http",
+						"Hybris_salesOrderCreate_HTTP_Build"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostChangeCancelOrder",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessTokenUrl",
+							"value": "https://sna-common-dev.authentication.us20.hana.ondemand.com/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "9c4bd50a-2b42-4f4c-8fa0-49fb9cce1be9$m1JV4QuUi916FbBzzWTqeVZVp4VGChCruExGIrvo1lY=",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "sb-7809b508-efc2-4e2b-b5b7-a649ba944994!b3479|it-rt-sna-common-dev!b34",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "snaTestProdPrice",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"erpOrderNumber\" : \"11169585\",\r\n  \"soldTo\" : \"2624095\",\r\n  \"shipTo\" : \"2624095\",\r\n  \"changeOrderType\" : \"CANCEL_ORDER\",\r\n  \"reasonCode\" : \"P50\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sna-common-dev.it-cpi009-rt.cfapps.us20.hana.ondemand.com/http/Hybris_salesOrderChange_HTTP_Build",
+					"protocol": "https",
+					"host": [
+						"sna-common-dev",
+						"it-cpi009-rt",
+						"cfapps",
+						"us20",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"http",
+						"Hybris_salesOrderChange_HTTP_Build"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

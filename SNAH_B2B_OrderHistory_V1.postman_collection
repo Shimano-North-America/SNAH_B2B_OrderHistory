@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "6c14b77b-fabc-4170-b732-08be62abcc4c",
+		"name": "SNAH_B2B_OrderHistory_updatedendpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33014502"
+	},
+	"item": [
+		{
+			"name": "Order History",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "9c4bd50a-2b42-4f4c-8fa0-49fb9cce1be9$m1JV4QuUi916FbBzzWTqeVZVp4VGChCruExGIrvo1lY=",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "sb-7809b508-efc2-4e2b-b5b7-a649ba944994!b3479|it-rt-sna-common-dev!b34",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://sna-common-dev.authentication.us20.hana.ondemand.com/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "SNAH_B2B_OrderHistory",
+							"type": "string"
+						},
+						{
+							"key": "refreshTokenUrl",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "KDI66baQbPUjW4SorzfcqNv3TkltuSOA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\r\n//     \"soldTo\": \"03005507\",\r\n//     \"shipTo\": [\r\n//         \"03005507\"\r\n//     ],\r\n//     \"search\": \"\",\r\n//     \"searchBy\": \"\",\r\n//     \"fromDate\": \"\",\r\n//     \"toDate\": \"\",\r\n//     \"status\": [],\r\n//     \"sort\": \"orderDate\",\r\n//     \"dir\": \"asc\",\r\n//     \"currentPage\": 0,\r\n//     \"pageSize\": 10,\r\n//     \"orderType\": []\r\n// }\r\n\r\n// {\r\n//     \"soldTo\": \"03297461\",\r\n//     \"shipTo\": [\r\n//         \"03297461\"\r\n//     ],\r\n//     \"search\": \"11937804\",\r\n//     \"searchBy\": \"orderNumber\",\r\n//     \"fromDate\": \"\",\r\n//     \"toDate\": \"\",\r\n//     \"status\": [],\r\n//     \"sort\": \"orderDate\",\r\n//     \"dir\": \"asc\",\r\n//     \"currentPage\": 0,\r\n//     \"pageSize\": 10,\r\n//     \"orderType\": []\r\n// }\r\n\r\n// {\r\n//     \"soldTo\": \"02862908\",\r\n//     \"shipTo\": [\r\n//         \"03565087\"\r\n//     ],\r\n//     \"search\": \"\",\r\n//     \"searchBy\": \"\",\r\n//     \"fromDate\": \"\",\r\n//     \"toDate\": \"\",\r\n//     \"status\": [],\r\n//     \"sort\": \"orderDate\",\r\n//     \"dir\": \"asc\",\r\n//     \"currentPage\": 0,\r\n//     \"pageSize\": 10,\r\n//     \"orderType\": []\r\n// }\r\n\r\n// {\r\n//     \"soldTo\": \"01749947\",\r\n//     \"shipTo\": [\r\n//         \"01749947\"\r\n//     ],\r\n//     \"search\": \"\",\r\n//     \"searchBy\": \"\",\r\n//     \"fromDate\": \"\",\r\n//     \"toDate\": \"\",\r\n//     \"status\": [],\r\n//     \"sort\": \"orderDate\",\r\n//     \"dir\": \"asc\",\r\n//     \"currentPage\": 0,\r\n//     \"pageSize\": 10,\r\n//     \"orderType\": []\r\n// }\r\n\r\n// {\r\n//     \"soldTo\": \"01749947\",\r\n//     \"shipTo\": [\r\n//         \"01749947\"\r\n//     ],\r\n//     \"search\": \"11501714\",\r\n//     \"searchBy\": \"orderNumber\",\r\n//     \"fromDate\": \"\",\r\n//     \"toDate\": \"\",\r\n//     \"status\": [],\r\n//     \"sort\": \"orderDate\",\r\n//     \"dir\": \"asc\",\r\n//     \"currentPage\": 0,\r\n//     \"pageSize\": 10,\r\n//     \"orderType\": []\r\n// }\r\n\r\n// {\r\n//     \"soldTo\": \"01749947\",\r\n//     \"shipTo\": [\r\n//         \"01749947\"\r\n//     ],\r\n//     \"search\": \"\",\r\n//     \"searchBy\": \"\",\r\n//     \"fromDate\": \"\",\r\n//     \"toDate\": \"\",\r\n//     \"status\": [],\r\n//     \"sort\": \"orderDate\",\r\n//     \"dir\": \"asc\",\r\n//     \"currentPage\": 0,\r\n//     \"pageSize\": 10,\r\n//     \"orderType\": [\"SO\"]\r\n// }\r\n\r\n// {\r\n//     \"soldTo\": \"01749947\",\r\n//     \"shipTo\": [\r\n//         \"01749947\"\r\n//     ],\r\n//     \"search\": \"\",\r\n//     \"searchBy\": \"\",\r\n//     \"fromDate\": \"\",\r\n//     \"toDate\": \"\",\r\n//     \"status\": [\"1\"],\r\n//     \"sort\": \"orderDate\",\r\n//     \"dir\": \"asc\",\r\n//     \"currentPage\": 0,\r\n//     \"pageSize\": 10,\r\n//     \"orderType\": []\r\n// }\r\n\r\n// {\r\n//     \"soldTo\": \"01749947\",\r\n//     \"shipTo\": [\r\n//         \"01749947\"\r\n//     ],\r\n//     \"search\": \"\",\r\n//     \"searchBy\": \"\",\r\n//     \"fromDate\": \"\",\r\n//     \"toDate\": \"\",\r\n//     \"status\": [\"2\"],\r\n//     \"sort\": \"orderDate\",\r\n//     \"dir\": \"asc\",\r\n//     \"currentPage\": 0,\r\n//     \"pageSize\": 10,\r\n//     \"orderType\": []\r\n// }\r\n\r\n// {\r\n//     \"soldTo\": \"01749947\",\r\n//     \"shipTo\": [\r\n//         \"01749947\"\r\n//     ],\r\n//     \"search\": \"\",\r\n//     \"searchBy\": \"\",\r\n//     \"fromDate\": \"\",\r\n//     \"toDate\": \"\",\r\n//     \"status\": [\"3\"],\r\n//     \"sort\": \"orderDate\",\r\n//     \"dir\": \"asc\",\r\n//     \"currentPage\": 0,\r\n//     \"pageSize\": 10,\r\n//     \"orderType\": []\r\n// }\r\n\r\n// {\r\n//     \"soldTo\": \"01749947\",\r\n//     \"shipTo\": [\r\n//         \"01749947\"\r\n//     ],\r\n//     \"search\": \"\",\r\n//     \"searchBy\": \"2023-03-30T00:00:00.000Z\",\r\n//     \"fromDate\": \"2023-03-30T00:00:00.000Z\",\r\n//     \"toDate\": \"\",\r\n//     \"status\": [],\r\n//     \"sort\": \"orderDate\",\r\n//     \"dir\": \"asc\",\r\n//     \"currentPage\": 0,\r\n//     \"pageSize\": 10,\r\n//     \"orderType\": []\r\n// }\r\n\r\n\r\n{\r\n    \"soldTo\": \"00240135\",\r\n    \"shipTo\": [\r\n        \"03550329\"\r\n    ],\r\n    \"search\": \"\",\r\n    \"searchBy\": \"\",\r\n    \"fromDate\": \"\",\r\n    \"toDate\": \"\",\r\n    \"status\": [],\r\n    \"sort\": \"orderDate\",\r\n    \"dir\": \"asc\",\r\n    \"currentPage\": 0,\r\n    \"pageSize\": 10,\r\n    \"orderType\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sna-common-dev.it-cpi009-rt.cfapps.us20.hana.ondemand.com/http/GetOrderHistory",
+					"protocol": "https",
+					"host": [
+						"sna-common-dev",
+						"it-cpi009-rt",
+						"cfapps",
+						"us20",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"http",
+						"GetOrderHistory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order Status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessTokenUrl",
+							"value": "https://sna-common-dev.authentication.us20.hana.ondemand.com/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "9c4bd50a-2b42-4f4c-8fa0-49fb9cce1be9$m1JV4QuUi916FbBzzWTqeVZVp4VGChCruExGIrvo1lY=",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "sb-7809b508-efc2-4e2b-b5b7-a649ba944994!b3479|it-rt-sna-common-dev!b34",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Get Order Status",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "refreshTokenUrl",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n  \"soldTo\": \"02074202\",\r\n  \"erpOrderNumber\": \"11960932\",\r\n  \"erpOrderType\": \"SW\"\r\n}\r\n\r\n//  {\r\n//   \"soldTo\": \"01118574\",\r\n//   \"erpOrderNumber\": \"11908536\",\r\n//   \"erpOrderType\": \"SW\"\r\n// }\r\n\r\n//  {\r\n//   \"soldTo\": \"01274572\",\r\n//   \"erpOrderNumber\": \"11971638\",\r\n//   \"erpOrderType\": \"SW\"\r\n// }\r\n\r\n//  {\r\n//   \"soldTo\": \"02075809\",\r\n//   \"erpOrderNumber\": \"11967228\",\r\n//   \"erpOrderType\": \"SO\"\r\n// }\r\n\r\n//  {\r\n//   \"soldTo\": \"02075809\",\r\n//   \"erpOrderNumber\": \"11970555\",\r\n//   \"erpOrderType\": \"SO\"\r\n// }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sna-common-dev.it-cpi009-rt.cfapps.us20.hana.ondemand.com/http/GetOrderstatus",
+					"protocol": "https",
+					"host": [
+						"sna-common-dev",
+						"it-cpi009-rt",
+						"cfapps",
+						"us20",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"http",
+						"GetOrderstatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BackOrderHistory",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessTokenUrl",
+							"value": "https://sna-common-dev.authentication.us20.hana.ondemand.com/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "9c4bd50a-2b42-4f4c-8fa0-49fb9cce1be9$m1JV4QuUi916FbBzzWTqeVZVp4VGChCruExGIrvo1lY=",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "sb-7809b508-efc2-4e2b-b5b7-a649ba944994!b3479|it-rt-sna-common-dev!b34",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "SNAH_B2B_BackOrderHistory",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "refreshTokenUrl",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\r\n//     \"soldTo\": \"01399767\",\r\n//     \"shipTo\": [\r\n//         \"03150380\"\r\n//     ],\r\n//     \"search\": \"7907224\",\r\n//     \"searchBy\": \"orderNumber\",\r\n//     \"fromDate\": \"\",\r\n//     \"toDate\": \"\",\r\n//     \"status\": [],\r\n//     \"sort\": \"orderDate\",\r\n//     \"dir\": \"asc\",\r\n//     \"currentPage\": 0,\r\n//     \"pageSize\": 10,\r\n//     \"orderType\": []\r\n// }\r\n\r\n\r\n// {\r\n//     \"soldTo\": \"01399767\",\r\n//     \"shipTo\": [\r\n//         \"03150380\"\r\n//     ],\r\n//     \"search\": \"7907224\",\r\n//     \"searchBy\": \"orderNumber\",\r\n//     \"fromDate\": \"2017-03-14T00:00:00.000Z\",\r\n//     \"toDate\": \"2017-03-14T00:00:00.000Z\",\r\n//     \"status\": [],\r\n//     \"sort\": \"orderDate\",\r\n//     \"dir\": \"asc\",\r\n//     \"currentPage\": 0,\r\n//     \"pageSize\": 10,\r\n//     \"orderType\": []\r\n// }\r\n\r\n// {\r\n//     \"soldTo\": \"01399767\",\r\n//     \"shipTo\": [\r\n//         \"03150380\"\r\n//     ],\r\n//     \"search\": \"\",\r\n//     \"searchBy\": \"\",\r\n//     \"fromDate\": \"\",\r\n//     \"toDate\": \"\",\r\n//     \"status\": [\"3\"],\r\n//     \"sort\": \"orderDate\",\r\n//     \"dir\": \"asc\",\r\n//     \"currentPage\": 0,\r\n//     \"pageSize\": 10,\r\n//     \"orderType\": []\r\n// }\r\n\r\n// {\r\n//     \"soldTo\": \"01399767\",\r\n//     \"shipTo\": [\r\n//         \"03150380\"\r\n//     ],\r\n//     \"search\": \"\",\r\n//     \"searchBy\": \"\",\r\n//     \"fromDate\": \"\",\r\n//     \"toDate\": \"\",\r\n//     \"status\": [],\r\n//     \"sort\": \"orderDate\",\r\n//     \"dir\": \"asc\",\r\n//     \"currentPage\": 0,\r\n//     \"pageSize\": 10,\r\n//     \"orderType\": [\"SO\"]\r\n// }\r\n\r\n// {\r\n//     \"soldTo\": \"03564277\",\r\n//     \"shipTo\": [\r\n//         \"03564277\"\r\n//     ],\r\n//     \"search\": \"\",\r\n//     \"searchBy\": \"\",\r\n//     \"fromDate\": \"\",\r\n//     \"toDate\": \"\",\r\n//     \"status\": [],\r\n//     \"sort\": \"orderDate\",\r\n//     \"dir\": \"asc\",\r\n//     \"currentPage\": 0,\r\n//     \"pageSize\": 10,\r\n//     \"orderType\": []\r\n// }\r\n\r\n// {\r\n//     \"soldTo\": \"03564277\",\r\n//     \"shipTo\": [\r\n//         \"03564277\"\r\n//     ],\r\n//     \"search\": \"10795449\",\r\n//     \"searchBy\": \"orderNumber\",\r\n//     \"fromDate\": \"\",\r\n//     \"toDate\": \"\",\r\n//     \"status\": [],\r\n//     \"sort\": \"orderDate\",\r\n//     \"dir\": \"asc\",\r\n//     \"currentPage\": 0,\r\n//     \"pageSize\": 10,\r\n//     \"orderType\": []\r\n// }\r\n\r\n// {\r\n//     \"soldTo\": \"03499331\",\r\n//     \"shipTo\": [\r\n//         \"03499331\"\r\n//     ],\r\n//     \"search\": \"\",\r\n//     \"searchBy\": \"\",\r\n//     \"fromDate\": \"\",\r\n//     \"toDate\": \"\",\r\n//     \"status\": [],\r\n//     \"sort\": \"orderDate\",\r\n//     \"dir\": \"asc\",\r\n//     \"currentPage\": 0,\r\n//     \"pageSize\": 10,\r\n//     \"orderType\": []\r\n// }\r\n\r\n// {\r\n//     \"soldTo\": \"02075518\",\r\n//     \"shipTo\": [\r\n//         \"03348132\"\r\n//     ],\r\n//     \"search\": \"\",\r\n//     \"searchBy\": \"\",\r\n//     \"fromDate\": \"\",\r\n//     \"toDate\": \"\",\r\n//     \"status\": [],\r\n//     \"sort\": \"orderDate\",\r\n//     \"dir\": \"asc\",\r\n//     \"currentPage\": 0,\r\n//     \"pageSize\": 10,\r\n//     \"orderType\": []\r\n// }\r\n\r\n// {\r\n//     \"soldTo\": \"00617700\",\r\n//     \"shipTo\": [\r\n//         \"00617700\"\r\n//     ],\r\n//     \"search\": \"\",\r\n//     \"searchBy\": \"\",\r\n//     \"fromDate\": \"\",\r\n//     \"toDate\": \"\",\r\n//     \"status\": [],\r\n//     \"sort\": \"orderDate\",\r\n//     \"dir\": \"asc\",\r\n//     \"currentPage\": 0,\r\n//     \"pageSize\": 10,\r\n//     \"orderType\": []\r\n// }\r\n\r\n{\r\n    \"soldTo\": \"02764096\",\r\n    \"shipTo\": [\r\n        \"02764096\"\r\n    ],\r\n    \"search\": \"\",\r\n    \"searchBy\": \"\",\r\n    \"fromDate\": \"\",\r\n    \"toDate\": \"\",\r\n    \"status\": [],\r\n    \"sort\": \"orderDate\",\r\n    \"dir\": \"asc\",\r\n    \"currentPage\": 0,\r\n    \"pageSize\": 10,\r\n    \"orderType\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sna-common-dev.it-cpi009-rt.cfapps.us20.hana.ondemand.com/http/BackOrderHistory",
+					"protocol": "https",
+					"host": [
+						"sna-common-dev",
+						"it-cpi009-rt",
+						"cfapps",
+						"us20",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"http",
+						"BackOrderHistory"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

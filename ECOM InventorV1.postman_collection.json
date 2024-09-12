@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "ede68875-e2e0-4431-9647-d9c85a03a795",
+		"name": "ECOM Inventory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27111871"
+	},
+	"item": [
+		{
+			"name": "inventory",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "9c4bd50a-2b42-4f4c-8fa0-49fb9cce1be9$m1JV4QuUi916FbBzzWTqeVZVp4VGChCruExGIrvo1lY=",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "sb-7809b508-efc2-4e2b-b5b7-a649ba944994!b3479|it-rt-sna-common-dev!b34",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "newProdPriceToken",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://sna-common-dev.authentication.us20.hana.ondemand.com/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerNumber\" : \"2624095\",\r\n  \"productCodes\" : \"IRDRX825A\",\r\n  \"shipTo\" : \"2624095\",\r\n  \"country\" : \"US\",\r\n  \"isStockRequest\" : true,\r\n  \"isDeliveryDateRequest\" : true,\r\n  \"warehouses\" : \"IRV:NCH\",\r\n  \"products\" : [ {\r\n    \"code\" : \"IRDRX825A\",\r\n    \"quantity\" : 1\r\n  } ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sna-common-dev.it-cpi009-rt.cfapps.us20.hana.ondemand.com/http/JDE_realtimeInventory_HTTP_Build",
+					"protocol": "https",
+					"host": [
+						"sna-common-dev",
+						"it-cpi009-rt",
+						"cfapps",
+						"us20",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"http",
+						"JDE_realtimeInventory_HTTP_Build"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

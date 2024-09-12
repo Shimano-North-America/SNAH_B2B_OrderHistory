@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "6efdab1b-8e8f-4045-8421-3cae44f2762b",
+		"name": "DealerPricing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27111871"
+	},
+	"item": [
+		{
+			"name": "Query Metadata",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "newProdPriceToken",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "e73830c7-67f4-4abf-94d7-fb8da637fe62$pEXtqJ-FdmO5aHBtI832t6zS70nRCSZtInKdxEBKGUY=",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "sb-SNAH_ProductPrice!t3479",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://sna-common-dev.authentication.us20.hana.ondemand.com/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sna-common-dev-is-dev-snah-productprice-srv.cfapps.us20.hana.ondemand.com/odata/v4/product-price/$metadata",
+					"protocol": "https",
+					"host": [
+						"sna-common-dev-is-dev-snah-productprice-srv",
+						"cfapps",
+						"us20",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"odata",
+						"v4",
+						"product-price",
+						"$metadata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QueryCustomerPrice",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "9c4bd50a-2b42-4f4c-8fa0-49fb9cce1be9$m1JV4QuUi916FbBzzWTqeVZVp4VGChCruExGIrvo1lY=",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "sb-7809b508-efc2-4e2b-b5b7-a649ba944994!b3479|it-rt-sna-common-dev!b34",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "newProdPriceToken",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://sna-common-dev.authentication.us20.hana.ondemand.com/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n  \"customerNumber\" : \"3291148\",\r\n  \"currency\" : \"USD\",\r\n  \"productCodes\" : \"A-DRA1/4:10RKR:107AR:108X1:10ANN:10A71:10BAN:10BGQ:10B9S:10CKU:10CPJ:10D9C:10PCW:10PE2:10PFX:10PNS:10PN1:10PRL:10PSK:10Q5N:10RLD:10RW1:10R3A:10SBC:10TRF:10T7R:106NU:106PY:107RB:108S5:109L9:109PG:BNT1886:BNT2424:BNT4035:BNT4396:BNT4490:BNT4641:BNT4671:BNT4742:BNT4743:BNT4775:BNT5294:FLY0154:FLY0158:FLY0164:FLY0188:FLY0200:MCR0044:RD0784:RD0806:RD1637:RD6524:RD8617:RD13182:RD13183:RD13599:RD13673:RD14286:RD15449:RD15644:RD16051:RD16119:RD16144:RD16274:RD16354:RD16460:RD16543:RD17043:RD17051:RD17085:RD17164:RD17219:RD17222:RD17263:RD17294:RD17327:RD17328:RD22432:TGT0032:TGT0185:TGT0326:TGT0364:TGT0818:TGT0895:TGT0900:TGT0906:TGT1138:TGT1271:TGT1277:TGT1328:TGT1433:TGT1781:TGT1782:TGT1787:TGT1792:TGT1801:TGT1809:TGT1827:TGT2013\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sna-common-dev.it-cpi009-rt.cfapps.us20.hana.ondemand.com/http/Hybris_dealerpricequery_HTTP_Build",
+					"protocol": "https",
+					"host": [
+						"sna-common-dev",
+						"it-cpi009-rt",
+						"cfapps",
+						"us20",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"http",
+						"Hybris_dealerpricequery_HTTP_Build"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
