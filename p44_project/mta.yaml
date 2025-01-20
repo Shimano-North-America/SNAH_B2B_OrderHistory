@@ -1,14 +1,14 @@
 _schema-version: "3.1"
-ID: SNAH_B2B_BackOrderHistory
+ID: p44_project
 description: A simple CAP project.
 version: 1.0.0
 modules:
-- name: SNAH_B2B_BackOrderHistory-srv
+- name: p44_project-srv
   type: nodejs
   path: gen/srv
   requires:
+  - name: p44_project-db
   - name: SNAH_B2B_Common_oAuth
-  - name: SNAH_B2B_BackOrderHistory-db
   provides:
   - name: srv-api
     properties:
@@ -19,14 +19,21 @@ modules:
     readiness-health-check-type: http
   build-parameters:
     builder: npm
-- name: SNAH_B2B_BackOrderHistory-db-deployer
+- name: p44_project-db-deployer
   type: hdb
   path: gen/db
   requires:
-  - name: SNAH_B2B_BackOrderHistory-db
+  - name: p44_project-db
+    properties:
+      TARGET_CONTAINER: ~{hdi-container-name}
+  - name: cross-container-service-1
+    group: SERVICE_REPLACEMENTS
+    properties:
+      key: ServiceName_1
+      service: ~{the-service-name}
   parameters:
     buildpack: nodejs_buildpack
-- name: SNAH_B2B_BackOrderHistory
+- name: p44_project
   type: approuter.nodejs
   path: app/router
   requires:
@@ -42,25 +49,24 @@ modules:
     keep-existing-routes: true
     memory: 256M
 resources:
-- name: SNAH_B2B_Common_oAuth
-  type: org.cloudfoundry.managed-service
-  parameters:
-    config:
-      tenant-mode: dedicated
-      xsappname: SNAH_B2B_BackOrderHistory
-    path: ./xs-security.json
-    service: xsuaa
-    service-plan: application
-- name: SNAH_B2B_BackOrderHistory-db
+- name: p44_project-db
   type: com.sap.xs.hdi-container
   parameters:
     service: hana
     service-plan: hdi-shared
-- name: SNAH_B2B_BackOrderHistory_html_repo_host
+  properties:
+    hdi-container-name: ${service-name}
+- name: SNAH_B2B_Common_oAuth
   type: org.cloudfoundry.managed-service
   parameters:
-    service: html5-apps-repo
-    service-plan: app-host
+    service: xsuaa
+    service-plan: application
+- name: cross-container-service-1
+  type: org.cloudfoundry.existing-service
+  parameters:
+    service-name: p44_project-db
+  properties:
+    the-service-name: ${service-name}
 parameters:
   enable-parallel-deployments: true
 build-parameters:

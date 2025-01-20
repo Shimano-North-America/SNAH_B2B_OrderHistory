@@ -2,17 +2,54 @@
 POST http://localhost:4004/odata/v4/erp-backorderhistory/GetBackOrderHistory
 Content-Type: application/json
 
+
 {
- "soldTo" : "02076002",
- "shipTo" : ["2152581"],
- "search" : "11998871",
- "searchBy" : "orderNumber",
- "fromDate" : "2024-06-26 00:00:00.000000000",
- "toDate" : "2024-06-26 00:00:00.000000000",
- "status" : [ "3"],
- "sort" : "orderDate",
- "dir" : "desc",
- "currentPage" : 0,
- "pageSize" : 12,
- "orderType" : [ "SE"]
+  "soldTo": "00654340",
+  "shipTo": [],
+  "search": "",
+  "searchBy": "",
+  "fromDate": "2024-04-22T00:00:00+09:00",
+  "toDate": "",
+  "status": [],
+  "sort": "orderDate",
+  "dir": "desc",
+  "currentPage": 0,
+  "pageSize": 12,
+  "orderType": []
 }
+
+
+
+
+# {
+#     "soldTo": "1399767",
+#     "shipTo": [
+#         "3150380"
+#     ],
+#     "search": "orderNumber",
+#     "searchBy": "7907224",
+#     "fromDate": "",
+#     "toDate": "",
+#     "status": [],
+#     "sort": "orderDate",
+#     "dir": "asc",
+#     "currentPage": 0,
+#     "pageSize": 10,
+#     "orderType": []
+# }
+
+
+# {
+#  "soldTo" : "02076002",
+#  "shipTo" : ["2152581"],
+#  "search" : "11998871",
+#  "searchBy" : "orderNumber",
+#  "fromDate" : "2024-06-26 00:00:00.000000000",
+#  "toDate" : "2024-06-26 00:00:00.000000000",
+#  "status" : [ "3"],
+#  "sort" : "orderDate",
+#  "dir" : "desc",
+#  "currentPage" : 0,
+#  "pageSize" : 12,
+#  "orderType" : [ "SE"]
+# }

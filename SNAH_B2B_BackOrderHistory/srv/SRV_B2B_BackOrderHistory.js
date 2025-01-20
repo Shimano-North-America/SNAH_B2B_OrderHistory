@@ -49,20 +49,67 @@ module.exports = cds.service.impl(async function (srv) {
                     }
                 });
             }
+            // if (fromDate && toDate) {
+            //     query.where({
+            //         ORDERDATE: {
+            //             between: fromDate,
+            //             and: toDate
+            //         }
+            //     });
+            // } else if (fromDate && !toDate) {
+            //     query.where({
+            //         ORDERDATE: {
+            //             '=': fromDate
+            //         }
+            //     });
+            // }
+
+            // // fromDate && toDate changes
+            // if (fromDate && toDate) {
+            //     query.where({
+            //         ORDERDATE: {
+            //             between: new Date(fromDate).toISOString(),
+            //             and: new Date(toDate).toISOString()
+            //         }
+            //     });
+            // } else if (fromDate && !toDate) {
+            //     query.where({
+            //         ORDERDATE: {
+            //             '=': new Date(fromDate).toISOString()
+            //         }
+            //     });
+            // } else if (!fromDate && toDate) {
+            //     query.where({
+            //         ORDERDATE: {
+            //             '<=': new Date(toDate).toISOString()
+            //         }
+            //     });
+            // }
+
+            // fromDate & toDate conditions
+            const currentDate = new Date().toISOString();
             if (fromDate && toDate) {
                 query.where({
                     ORDERDATE: {
-                        between: fromDate,
-                        and: toDate
+                        between: new Date(fromDate).toISOString(),
+                        and: new Date(toDate).toISOString()
                     }
                 });
             } else if (fromDate && !toDate) {
                 query.where({
                     ORDERDATE: {
-                        '=': fromDate
+                        between: new Date(fromDate).toISOString(),
+                        and: currentDate
+                    }
+                });
+            } else if (!fromDate && toDate) {
+                query.where({
+                    ORDERDATE: {
+                        '<=': new Date(toDate).toISOString()
                     }
                 });
             }
+
             if (status && status.length > 0) {
                 query.where({
                     ORDERSTATUS: {
@@ -123,7 +170,7 @@ module.exports = cds.service.impl(async function (srv) {
                 };
                 return data;
             } else {
-                req.reject(403, "Data Not Found");
+                req.reject(404, "Data Not Found");
             };
 
         } catch (err) {
